@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Weather Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="light">
   <div class="container">
+    <div style="text-align: right;">
+      <label class="switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+
     <h1>🌦 Weather Dashboard</h1>
-    
     <input type="text" id="cityInput" placeholder="Enter city name" />
     <button onclick="getWeather()">Get Weather</button>
 
     <div id="weatherResult"></div>
+
+    <h3>5-Day Forecast</h3>
+    <div id="forecast" class="forecast-grid"></div>
 
     <h3>Search History</h3>
     <ul id="historyList"></ul>
